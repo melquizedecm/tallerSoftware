@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Table with Add and Delete Row Feature</title>
+        <title>Perfiles</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -129,8 +129,8 @@
                             '<td><input type="text" class="form-control" name="inputId" id="inputId"></td>' +
                             '<td><input type="text" class="form-control" name="inputNombre" id="inputNombre"></td>' +
                             '<td><input type="text" class="form-control" name="inputGestion" id="inputGestion"></td>' +
-                            '<td><input type="text" class="form-control" name="nose" id="nose"></td>' +
-                            '<td><input type="text" class="form-control" name="ph" id="ph"></td>' +
+                            '<td><input type="text" class="form-control" name="inputVenta" id="inputVenta"></td>' +
+                            '<td><input type="text" class="form-control" name="inputPerfiles" id="inputPerfiles"></td>' +
                             '<td>' + actions + '</td>' +
                             '</tr>';
                     $("table").prepend(row);
@@ -148,9 +148,16 @@
 
                     $.post("../../Controllers/perfilesController.php",
                             {
-                                inputId: id,
-                                inputNombre: nombre,
-                                buttonCreate:true
+                                inputId: Id,
+                                inputNombre: Nombre,
+                                inputUsuarios: Usuarios,
+                                inputVender: Vender,
+                                inputPerfiles: Perfiles,
+                                
+                                buttonCreate: true,
+                                buttonEdit: true,
+                                buttonDelete: true
+
 
                             },
                             function(data){
@@ -219,9 +226,9 @@
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
-                            <th>Permiso de Gestion de Usuarios</th>
+                            <th>Gestion de Usuarios</th>
                             <th>Permiso de Venta</th>
-                            <th>Permiso de Gestion de Perfiles</th>
+                            <th>Gestion de Perfiles</th>
                             <th>Actions</th>
                         </tr>
                     </thead>

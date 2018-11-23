@@ -1,5 +1,8 @@
 <?php
 
+require_once '../lib/links.php';
+libnivel2();
+
 if (isset($_POST['buttonCreate'])) {
     $FacturasController = new FacturasController();
     $FacturasController->create();
@@ -19,14 +22,16 @@ class FacturasController {
     //funcion que realiza las acciones de inserccion de registros a la tabla de facturas
     function create() {
         //1. Recibir variables 
-        $idCliente->$_POST['inputnombre'];
+        $idCliente->$_POST['inputIdCliente'];
         $idComision->$_POST['inputIdComision'];
-        $fecha->_POST[''];
-        $estado->_POST[];
+        $fecha->_POST['inputFecha'];
+        $estado->_POST['inputEstado'];
+        $total->_POST['inputTotal'];
+        
         //2.Llamar al modelo
         
         require_once '../Models/Facturas.php';
-        $factura = new Factura($inputNombre);
+        $factura = new Factura(0,$idCliente,$idComision,$fecha,$estado,$total);
         $factura->create();
     }
 
