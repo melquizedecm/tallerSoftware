@@ -1,7 +1,9 @@
 <?php
 
 if (isset($_POST['buttonCreate'])) {
-    //llamar a crear
+    $FacturasController = new FacturasController();
+    $FacturasController->create();
+    
 } else if (isset($_POST['buttonRead'])) {
     
 } else if (isset($_POST['buttonUpdate'])) {
@@ -16,7 +18,16 @@ class FacturasController {
 
     //funcion que realiza las acciones de inserccion de registros a la tabla de facturas
     function create() {
+        //1. Recibir variables 
+        $idCliente->$_POST['inputnombre'];
+        $idComision->$_POST['inputIdComision'];
+        $fecha->_POST[''];
+        $estado->_POST[];
+        //2.Llamar al modelo
         
+        require_once '../Models/Facturas.php';
+        $factura = new Factura($inputNombre);
+        $factura->create();
     }
 
     //funcion de consulta a la tabla de facturas
