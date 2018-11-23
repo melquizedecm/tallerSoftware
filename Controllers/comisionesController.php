@@ -15,3 +15,21 @@ if (isset($_POST['buttonCreate'])){
 }elseif (isset($_POST['buttonDelete'])){
     
 }
+else{
+    header("location:../menu/");
+}
+
+class comisionControler{
+    function create(){
+        
+    }
+    function read(){
+        
+    }
+    function update(){
+        
+    }
+    function delete(){
+        
+    }
+}

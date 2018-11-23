@@ -2,6 +2,7 @@
 
 
 if (isset($_POST['buttonCreate'])) {
+    //llamar a crear
     
 } else if (isset($_POST['buttonRead'])) {
     
@@ -34,5 +35,22 @@ class FacturasController{
         
     }
     
+}
+else{
+    header("Location: ../menu/");
+}
+class ComisionController{
+    function create(){
+        
+    }
+    function read(){
+        
+    }
+    function Update(){
+        
+    }
+    function Delete(){
+        
+    }
 }
 ?>
