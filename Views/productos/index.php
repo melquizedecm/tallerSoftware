@@ -117,14 +117,14 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("table tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="id" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="usuario" id="usuario"></td>' +
-            '<td><input type="text" class="form-control" name="categoria" id="categoria"></td>' +
-            '<td><input type="text" class="form-control" name="nombre" id="nombre"></td>' +
-            '<td><input type="text" class="form-control" name="cantidad" id="cantidad"></td>' +
-            '<td><input type="text" class="form-control" name="valor" id="valor"></td>' +
-            '<td><input type="text" class="form-control" name="estado" id="estado"></td>' +
-			'<td>' + actions + '</td>' +
+            '<td><input type="text" class="form-control" name="Id" id="Id"></td>' +
+            '<td><input type="text" class="form-control" name="Usuario" id="Usuario"></td>' +
+            '<td><input type="text" class="form-control" name="CategoriaId" id="CategoriaId"></td>' +
+            '<td><input type="text" class="form-control" name="Nombre" id="Nombre"></td>' +
+            '<td><input type="text" class="form-control" name="Cantidad" id="Cantidad"></td>' +
+            '<td><input type="text" class="form-control" name="ValorUnitario" id="ValorUnitario"></td>' +
+            '<td><input type="text" class="form-control" name="Estado" id="Estado"></td>' +
+            '<td>' + actions + '</td>' +
         '</tr>';
     	$("table").append(row);		
 		$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
@@ -201,7 +201,7 @@ $(document).ready(function(){
                         <td>45000</td>
                         <td>En venta</td>
                         <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
@@ -215,7 +215,7 @@ $(document).ready(function(){
                         <td>45000</td>
                         <td>En venta</td>
                         <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
