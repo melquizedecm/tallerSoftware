@@ -10,7 +10,7 @@ elseif(isset ($_POST['buttonRead'])){
 elseif(isset ($_POST['buttonUpdate'])){
     
 }
-elseif (isset ($_POST['buttonDelate'])) {
+elseif (isset ($_POST['buttonDelete'])) {
 
 }
 
