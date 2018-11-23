@@ -1,11 +1,10 @@
 <?php
-
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-class productos {
+class Empleados {
 
     var $id;
     var $username;
@@ -25,6 +24,17 @@ class productos {
         $this->estado = $estado;
         $this->usuario_id = $usuario_id;
     }
+    
+    function create(){
+        $sql = "INSERT INTO empleado(id,username,categoria_id) VALUES ('".$this->id."','".$this->username."','".$this->categoria_id."')";
+        $response = getResultSQL($sql);
+        if (!$response) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
     function getId() {
         return $this->id;
     }
