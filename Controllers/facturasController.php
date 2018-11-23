@@ -1,11 +1,8 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 if (isset($_POST['buttonCreate'])) {
+    //llamar a crear
     
 } else if (isset($_POST['buttonRead'])) {
     
@@ -13,5 +10,47 @@ if (isset($_POST['buttonCreate'])) {
     
 } else if (isset($_POST['buttonDelete'])) {
     
+}  else {   //en caso de ejecutarse alguna de las opciones anteriores, se regresa al menu principal
+    header("Location: ../meunu/");
+}
+
+class FacturasController{
+    //funcion que realiza las acciones de inserccion de registros a la tabla de facturas
+    function create(){
+        
+    }
+    
+    //funcion de consulta a la tabla de facturas
+    function read(){
+        
+    }
+    
+    //funcion que actualiza un determinado registro
+    function update(){
+        
+    }
+    
+    //funcion que elimina registros de la tabla 
+    function delete(){
+        
+    }
+    
+}
+else{
+    header("Location: ../menu/");
+}
+class ComisionController{
+    function create(){
+        
+    }
+    function read(){
+        
+    }
+    function Update(){
+        
+    }
+    function Delete(){
+        
+    }
 }
 ?>
