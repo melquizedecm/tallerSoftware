@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generaci√≥n: 23-11-2018 a las 17:34:00
--- Versi√≥n del servidor: 10.1.16-MariaDB
--- Versi√≥n de PHP: 7.0.9
+-- Tiempo de generaciÛn: 23-11-2018 a las 17:34:00
+-- VersiÛn del servidor: 10.1.16-MariaDB
+-- VersiÛn de PHP: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -190,8 +190,31 @@ INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `email`, `nombre_usuario`, `
 (12, 'Viviana', 'Zuluaga', 'vazuluagab@gmail.com', 'vazb', 'vazb', 1, 1),
 (13, 'Ana', 'Perez', 'anaperez@gmail.com', 'ana', 'ana', 2, 1);
 
+
+
+-- --------------------------------------------------------
+
 --
--- √çndices para tablas volcadas
+-- Estructura de tabla para la tabla `empleados`
+--
+CREATE TABLE `empleados` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `estado` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `empleados`
+--
+INSERT INTO `empleados` (`id`, `nombre`, `estado`) VALUES
+(100, 'Juan Gomez','disponible'),
+(101, 'Rogelio cnache','disponible'),
+(102, 'Giovani gutierrez','disponible'),
+(103, 'Jesus Lopez', 'disponible'),
+
+-- --------------------------------------------------------
+--
+-- Õndices para tablas volcadas
 --
 
 --
@@ -214,6 +237,7 @@ ALTER TABLE `detalle`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_id_producto` (`id_producto`),
   ADD KEY `fk_id_factura` (`id_factura`);
+  
 
 --
 -- Indices de la tabla `factura`
@@ -222,6 +246,7 @@ ALTER TABLE `factura`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_id_comision` (`id_comision`),
   ADD KEY `fk_id_cliente` (`id_cliente`);
+  ADD KEY `fk_id_empleados` (`id_empleados`);
 
 --
 -- Indices de la tabla `perfil`
@@ -243,6 +268,13 @@ ALTER TABLE `producto`
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `nombre_usuario` (`nombre_usuario`);
+  
+  
+  
+  -- Indices de la tabla `empleado`
+--
+ALTER TABLE `empleados`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -282,6 +314,10 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  
+  
+  ALTER TABLE `empleados`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Restricciones para tablas volcadas
