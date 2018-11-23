@@ -6,7 +6,7 @@ libnivel2();
 if(isset($_POST['buttonCreate'])){
     require_once '../lib/links.php';
     libnivel2();
-    $controller = new PerfilesControler();
+    $controller = new ProductosController();
     $controller->create();
 }
 elseif(isset ($_POST['buttonRead'])){
@@ -21,7 +21,7 @@ elseif (isset ($_POST['buttonDelete'])) {
     header("location:../menu/");
 }
 
-class comisionControler{
+class ProductosController{
     function create(){
      //1. Recibir variables 
         $idCliente->$_POST['inputnombre'];
@@ -30,7 +30,7 @@ class comisionControler{
         $estado->_POST[];
         //2.Llamar al modelo
         
-        require_once '../Models/Facturas.php';
+        require_once '../Models/Productos.php';
         $factura = new Factura($inputNombre);
         $factura->create();
        
