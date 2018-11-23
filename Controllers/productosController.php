@@ -1,10 +1,13 @@
 <?php
-require_once '../linb/links.php';
+require_once '../lib/consultas.php';
 libnivel2();
 
 
 if(isset($_POST['buttonCreate'])){
-    
+    require_once '../lib/links.php';
+    libnivel2();
+    $controller = new PerfilesControler();
+    $controller->create();
 }
 elseif(isset ($_POST['buttonRead'])){
     
@@ -20,7 +23,17 @@ elseif (isset ($_POST['buttonDelete'])) {
 
 class comisionControler{
     function create(){
+     //1. Recibir variables 
+        $idCliente->$_POST['inputnombre'];
+        $idComision->$_POST['inputIdComision'];
+        $fecha->_POST[''];
+        $estado->_POST[];
+        //2.Llamar al modelo
         
+        require_once '../Models/Facturas.php';
+        $factura = new Factura($inputNombre);
+        $factura->create();
+       
     }
     function read(){
         
