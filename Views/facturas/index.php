@@ -115,20 +115,20 @@ $(document).ready(function(){
 	var actions = $("table td:last-child").html();
 	// Append table with add row form on add new button click
     $(".add-new").click(function(){
-		$(this).attr("disabled", "disabled");
+		$(this).attr("enable", "enable");
 		var index = $("table tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="id" id="id"></td>' +
-            '<td><input type="text" class="form-control" name="id_cliente" id="id_cliente"></td>' +
-            '<td><input type="text" class="form-control" name="id_comision" id="id_comision"></td>' +
-            '<td><input type="text" class="form-control" name="fecha" id="estado"></td>' +
-            '<td><input type="text" class="form-control" name="estado" id="estado"></td>' +
-            '<td><input type="text" class="form-control" name="total" id="total"></td>' +
+            '<td><input type="text" class="form-control" name="imputId" id="id"></td>' +
+            '<td><input type="text" class="form-control" name="imputIdcliente" id="id_cliente"></td>' +
+            '<td><input type="text" class="form-control" name="imputId_comision" id="id_comision"></td>' +
+            '<td><input type="text" class="form-control" name="imputFecha" id="estado"></td>' +
+            '<td><input type="text" class="form-control" name="eimputEstado" id="estado"></td>' +
+            '<td><input type="text" class="form-control" name="imputTotal" id="total"></td>' +
             
 			'<td>' + actions + '</td>' +
         '</tr>';
-    	$("table").append(row);		
-		$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
+    	$("table").prepend(row);		
+		$("table tbody tr").eq(0).find(".add, .edit").toggle();
         $('[data-toggle="tooltip"]').tooltip();
     });
 	// Add row on add button click
