@@ -11,12 +11,12 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Table with Add and Delete Row Feature</title>
+<title>Productos</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -168,26 +168,34 @@ $(document).ready(function(){
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Employee <b>Details</b></h2></div>
+                    <div class="col-sm-8"><h2>Detalle de Productos</h2></div>
                     <div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Nuevo</button>
                     </div>
                 </div>
             </div>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Department</th>
-                        <th>Phone</th>
-                        <th>Actions</th>
+                        <th>id</th>
+                        <th>usuario</th>
+                        <th>categoria</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Valor unitario</th>
+                        <th>Estado</th>
+                        <th>Accion</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>John Doe</td>
-                        <td>Administration</td>
-                        <td>(171) 555-2222</td>
+                        <td>1</td>
+                        <td>camv</td>
+                        <td>7</td>
+                        <td>cama</td>
+                        <td>1</td>
+                        <td>45000</td>
+                        <td>En venta</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -195,9 +203,13 @@ $(document).ready(function(){
                         </td>
                     </tr>
                     <tr>
-                        <td>Peter Parker</td>
-                        <td>Customer Service</td>
-                        <td>(313) 555-5735</td>
+                        <td>1</td>
+                        <td>camv</td>
+                        <td>7</td>
+                        <td>cama</td>
+                        <td>1</td>
+                        <td>45000</td>
+                        <td>En venta</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -205,9 +217,13 @@ $(document).ready(function(){
                         </td>
                     </tr>
                     <tr>
-                        <td>Fran Wilson</td>
-                        <td>Human Resources</td>
-                        <td>(503) 555-9931</td>
+                        <td>1</td>
+                        <td>camv</td>
+                        <td>7</td>
+                        <td>cama</td>
+                        <td>1</td>
+                        <td>45000</td>
+                        <td>En venta</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
