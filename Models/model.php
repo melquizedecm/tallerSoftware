@@ -26,7 +26,7 @@ class Empleados {
     }
     
     function create(){
-        $sql = "INSERT INTO empleado(id,username,categoria_id) VALUES ('".$this->id."','".$this->username."','".$this->categoria_id."')";
+        $sql = "INSERT INTO empleado(username,categoria_id) VALUES ('".$this->username."','".$this->categoria_id."')";
         $response = getResultSQL($sql);
         if (!$response) {
             return false;
