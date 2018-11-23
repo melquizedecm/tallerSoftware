@@ -24,15 +24,15 @@ elseif (isset ($_POST['buttonDelete'])) {
 class ProductosController{
     function create(){
      //1. Recibir variables 
-        $idCliente->$_POST['inputnombre'];
+        $idCliente->$_POST['inputUsuario'];
         $idComision->$_POST['inputIdComision'];
-        $fecha->_POST[''];
+        $nombre->_POST['inputCategoriaId '];
         $estado->_POST[];
         //2.Llamar al modelo
         
         require_once '../Models/Productos.php';
-        $factura = new Factura($inputNombre);
-        $factura->create();
+        $productos = new productos($inputUsuario);
+        $productos->create();
        
     }
     function read(){
