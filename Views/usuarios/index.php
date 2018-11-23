@@ -105,9 +105,13 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("table tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="department" id="department"></td>' +
-            '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
+            '<td><input type="text" class="form-control" name="nombre" id="name"></td>' +
+            '<td><input type="text" class="form-control" name="apellidos" id="department"></td>' +
+            '<td><input type="text" class="form-control" name="email" id="phone"></td>' +
+            '<td><input type="text" class="form-control" name="user" id="name"></td>' +
+            '<td><input type="text" class="form-control" name="password" id="name"></td>' +
+            '<td><input type="text" class="form-control" name="perfil" id="name"></td>' +
+            '<td><input type="text" class="form-control" name="estado" id="name"></td>' +
 			'<td>' + actions + '</td>' +
         '</tr>';
     	$("table").append(row);		
