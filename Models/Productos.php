@@ -19,7 +19,7 @@ class productos {
     var $estado;
     var $usuario_id;
     function __construct($id, $username, $categoria_id, $nombre, $cantidad, $valor_unitario, $estado, $usuario_id) {
-        $this->id = $id;
+  
         $this->username = $username;
         $this->categoria_id = $categoria_id;
         $this->nombre = $nombre;
@@ -29,7 +29,9 @@ class productos {
         $this->usuario_id = $usuario_id;
     }
     function create(){
-        $sql="INSERT INTO producto(id,) values('".$this->id."','".$this->username."','".$this->categoria_id."','".$this->nombre."')";
+        $sql="INSERT INTO producto(id,usuario_username,categoria_id,nombre,cantidad,valor_unitario,estado,usuario_id) "
+                . "values('".$this->username."','".$this->categoria_id."',"
+                . "'".$this->nombre."','".$this->cantidad."','".$this->valor_unitario."','".$this->estado."','".$this->usuario_id."')";
         $responde=getResultSQL($sql);
         if(!$responde){
             return false; 
