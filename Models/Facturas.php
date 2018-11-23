@@ -9,7 +9,7 @@ class Factura{
     var $total;
     
     function __construct($id, $id_cliente, $id_comision, $fecha, $estado, $total) {
-        $this->id = $id;
+        
         $this->id_cliente = $id_cliente;
         $this->id_comision = $id_comision;
         $this->fecha = $fecha;
