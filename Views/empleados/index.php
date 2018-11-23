@@ -12,7 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Empleados</title>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
         <!-- no olviden que esta libreria va al final-->
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-        
+
         <style type="text/css">
             body {
                 color: #404E67;
@@ -112,36 +112,69 @@
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
-                 $('#tablaEmpleado').DataTable();
-                
+                /* DATA TABLE */
+                $('#tablaEmpleado').DataTable();
+
+
+
                 $('[data-toggle="tooltip"]').tooltip();
                 var actions = $("table td:last-child").html();
+
+
                 // Append table with add row form on add new button click
                 $(".add-new").click(function () {
                     $(this).attr("disabled", "disabled");
                     var index = $("table tbody tr:last-child").index();
                     var row = '<tr>' +
-                            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-                            '<td><input type="text" class="form-control" name="department" id="department"></td>' +
-                            '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
+                            '<td><input type="text" class="form-control" name="inputId" id="inputId"></td>' +
+                            '<td><input type="text" class="form-control" name="inputNombre" id="inputNombre"></td>' +
+                            '<td><input type="text" class="form-control" name="inputEstado" id="inputEstado"></td>' +
                             '<td>' + actions + '</td>' +
                             '</tr>';
-                    $("table").append(row);
-                    $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
+                    $("table").prepend(row);
+                    $("table tbody tr").eq(0).find(".add, .edit").toggle();
                     $('[data-toggle="tooltip"]').tooltip();
                 });
+
+
                 // Add row on add button click
                 $(document).on("click", ".add", function () {
-                    var empty = false;
-                    var input = $(this).parents("tr").find('input[type="text"]');
-                    input.each(function () {
-                        if (!$(this).val()) {
-                            $(this).addClass("error");
-                            empty = true;
-                        } else {
-                            $(this).removeClass("error");
-                        }
-                    });
+                    var id = document.getElementById("inputId").value;
+                    var nombre = document.getElementById("inputNombre").value;
+                    var estado = document.getElementById("inputEstado").value;
+
+                    alert(id + nombre + estado);
+
+                    $.post("../../Controllers/EmpleadosController.php",
+                            {
+                                inputId: id,
+                                inputNombre: nombre,
+                                inputEstado:estado,
+                                buttonCreate:true
+
+                            },
+                            function(data){
+                              if (data){
+                                  alert(data);
+                              }   
+                              else{
+                                  alert("no tengo datos");
+                              }
+                            });
+
+
+
+
+                    /*var empty = false;
+                     var input = $(this).parents("tr").find('input[type="text"]');
+                     input.each(function () {
+                     if (!$(this).val()) {
+                     $(this).addClass("error");
+                     empty = true;
+                     } else {
+                     $(this).removeClass("error");
+                     }
+                     });*/
                     $(this).parents("tr").find(".error").first().focus();
                     if (!empty) {
                         input.each(function () {
@@ -151,6 +184,9 @@
                         $(".add-new").removeAttr("disabled");
                     }
                 });
+
+
+
                 // Edit row on edit button click
                 $(document).on("click", ".edit", function () {
                     $(this).parents("tr").find("td:not(:last-child)").each(function () {
@@ -172,19 +208,19 @@
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-8"><h2>Empleados</b></h2></div>
+                        <div class="col-sm-8"><h2>Empleados</h2></div>
                         <div class="col-sm-4">
-                            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Agregar</button>
+                            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
                         </div>
                     </div>
                 </div>
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="tablaPerfiles">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Estado</th>
-                            <th>Acciones</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -217,10 +253,11 @@
                                 <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                 <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                             </td>
-                        </tr>      
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
         </div>     
     </body>
-</html>                            
+</html> 
