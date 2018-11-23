@@ -6,6 +6,7 @@
  * and open the template in the editor.
  */
 if (isset($_POST['buttonCreate'])) {
+    //llamar a crear
     
 } else if (isset($_POST['buttonRead'])) {
     
@@ -13,5 +14,22 @@ if (isset($_POST['buttonCreate'])) {
     
 } else if (isset($_POST['buttonDelete'])) {
     
+}
+else{
+    header("Location: ../menu/");
+}
+class ComisionController{
+    function create(){
+        
+    }
+    function read(){
+        
+    }
+    function Update(){
+        
+    }
+    function Delete(){
+        
+    }
 }
 ?>
