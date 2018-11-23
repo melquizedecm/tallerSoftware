@@ -189,9 +189,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>John Doe</td>
-                            <td>Administration</td>
-                            <td>(171) 555-2222</td>
+                            <td>1</td>
+                            <td>Nombre1</td>
+                            <td>Activo</td>
                             <td>
                                 <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                                 <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -199,9 +199,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Peter Parker</td>
-                            <td>Customer Service</td>
-                            <td>(313) 555-5735</td>
+                            <td>2</td>
+                            <td>Nombre2</td>
+                            <td>Activo</td>
                             <td>
                                 <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                                 <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -209,9 +209,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Fran Wilson</td>
-                            <td>Human Resources</td>
-                            <td>(503) 555-9931</td>
+                            <td>3</td>
+                            <td>Nombre3</td>
+                            <td>Activo</td>
                             <td>
                                 <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                                 <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
