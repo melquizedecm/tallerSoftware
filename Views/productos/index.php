@@ -210,8 +210,8 @@ $(document).ready(function(){
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>camv</td>
+                        <td>2</td>
+                        <td>Juan</td>
                         <td>7</td>
                         <td>cama</td>
                         <td>1</td>
@@ -224,15 +224,15 @@ $(document).ready(function(){
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>camv</td>
+                        <td>3</td>
+                        <td>noe</td>
                         <td>7</td>
                         <td>cama</td>
                         <td>1</td>
                         <td>45000</td>
                         <td>En venta</td>
                         <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
