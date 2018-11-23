@@ -8,8 +8,8 @@ class Factura{
     var $estado;
     var $total;
     
-    function __construct($id, $id_cliente, $id_comision, $fecha, $estado, $total) {
-        
+    function __construct($id,$id_cliente, $id_comision, $fecha, $estado, $total) {
+        $this->id=$id;
         $this->id_cliente = $id_cliente;
         $this->id_comision = $id_comision;
         $this->fecha = $fecha;
@@ -26,7 +26,34 @@ class Factura{
             return true;
         }
     }
-
     
+    function read(){
+        $sql = "SELECT * FROM factura WHERE id=".$this->id."";
+        $response = getResultSQL($sql);
+        if (!$response) {
+            return false;
+        } else {
+            return true;
+        }
+    }
     
+    function update(){
+        $sql = "UPDATE factura SET id_cliente=".$this->id_cliente.",id_comision=".$this->id_comision.",fecha='".$this->fecha."',estado='".$this->estado."',total".$this->total.")";
+        $response = getResultSQL($sql);
+        if (!$response) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    function delete(){
+        $sql = "DELETE FROM factura WHERE id=".$this->id."";
+        $response = getResultSQL($sql);
+        if (!$response) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
