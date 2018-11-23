@@ -174,7 +174,7 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="tablaPerfiles">
                 <thead>
                     <tr>
                         <th>Nombre</th>
