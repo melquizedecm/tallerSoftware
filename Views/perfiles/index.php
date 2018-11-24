@@ -1,4 +1,6 @@
 <?php
+require_once '../../lib/links.php';
+libnivel3();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php        getMeta("Perfiles");?>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
