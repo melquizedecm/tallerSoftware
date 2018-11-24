@@ -1,5 +1,7 @@
 <?php
 
+require_once '../lib/consultas.php';
+
 class Factura{
     var $id;
     var $id_cliente;
@@ -21,8 +23,10 @@ class Factura{
         $sql = "INSERT INTO factura(id_cliente,id_comision,fecha,estado,total) VALUES (".$this->id_cliente.",".$this->id_comision.",'".$this->fecha."','".$this->estado."',".$this->total.")";
         $response = getResultSQL($sql);
         if (!$response) {
+            print_r($response);
             return false;
         } else {
+            print_r($response);
             return true;
         }
     }

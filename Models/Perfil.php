@@ -37,17 +37,34 @@ class Perfil{
         return $this->nombre;
     }
 
-    function setPorcentje() {
-        return $this->username;
+    function setNombre() {
+        return $this->nombre;
+    }
+    function getPermiso_gestionar_usuarios() {
+        return $this->permiso_gestionar_usuarios;
     }
 
-    function getFecha($fecha) {
-        $this->fecha = $fecha;
+    function setPermiso_gestionar_usuarios() {
+        return $this->permiso_gestionar_usuarios;
+    }
+    
+    function getPermiso_vender() {
+        return $this->permiso_vender;
     }
 
-    function setFecha($fecha) {
-        $this->fecha = $fecha;
+    function setPermiso_vender() {
+        return $this->permiso_vender;
     }
+    
+    function getPermiso_gestionar_perfiles() {
+        return $this->permiso_gestionar_perfiles;
+    }
+
+    function setPermiso_gestionar_perfiles() {
+        return $this->permiso_gestionar_perfiles;
+    }
+
+    
 
  
     

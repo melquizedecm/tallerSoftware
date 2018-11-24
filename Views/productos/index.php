@@ -120,22 +120,48 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("table tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="Id" id="Id"></td>' +
-            '<td><input type="text" class="form-control" name="Usuario" id="Usuario"></td>' +
-            '<td><input type="text" class="form-control" name="CategoriaId" id="CategoriaId"></td>' +
-            '<td><input type="text" class="form-control" name="Nombre" id="Nombre"></td>' +
-            '<td><input type="text" class="form-control" name="Cantidad" id="Cantidad"></td>' +
-            '<td><input type="text" class="form-control" name="ValorUnitario" id="ValorUnitario"></td>' +
-            '<td><input type="text" class="form-control" name="Estado" id="Estado"></td>' +
+            '<td><input type="text" class="form-control" name="inputId" id="inputId"></td>' +
+            '<td><input type="text" class="form-control" name="inputUsuario" id="inputUsuario"></td>' +
+            '<td><input type="text" class="form-control" name="inputCategoriaId" id="inputCategoriaId"></td>' +
+            '<td><input type="text" class="form-control" name="inputNombre" id="inputNombre"></td>' +
+            '<td><input type="text" class="form-control" name="inputCantidad" id="inputCantidad"></td>' +
+            '<td><input type="text" class="form-control" name="inputValorUnitario" id="inputValorUnitario"></td>' +
+            '<td><input type="text" class="form-control" name="inputEstado" id="inputEstado"></td>' +
             '<td>' + actions + '</td>' +
         '</tr>';
-    	$("table").append(row);		
-		$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
+    	$("table").prepend(row);		
+		$("table tbody tr").eq(0).find(".add, .edit").toggle();
         $('[data-toggle="tooltip"]').tooltip();
     });
 	// Add row on add button click
 	$(document).on("click", ".add", function(){
-		var empty = false;
+	var id = document.getElementById("inputId").value;
+        var usuario = document.getElementById("inputUsuario").value;
+        var categoriaid = document.getElementById("inputCategoriaId").value;
+        var nombre = document.getElementById("inputNombre").value;
+        var cantidad = document.getElementById("inputCantidad").value;
+        var valorUnitario = document.getElementById("inputValorUnitario").value;
+        var estado = document.getElementById("inputEstado").value;
+        
+       $.post("../../Controllers/ProductosController.php",
+       {
+           inputId : id,
+           inputUsuario : usuario,
+           inputCategoriaId : categoriaid,
+           inputNombre : nombre,
+           inputCantidad : cantidad,
+           inputValorUnitario : valorUnitario,
+           inputEstado : estado,
+           buttonCreate : true
+       }, function(data){
+            if(data){
+                alert(data);
+            }else{
+                alert("no tengo datos");
+            }
+       });
+        
+        /**var empty = false;
 		var input = $(this).parents("tr").find('input[type="text"]');
         input.each(function(){
 			if(!$(this).val()){
@@ -152,7 +178,7 @@ $(document).ready(function(){
 			});			
 			$(this).parents("tr").find(".add, .edit").toggle();
 			$(".add-new").removeAttr("disabled");
-		}		
+		}	**/	
     });
 	// Edit row on edit button click
 	$(document).on("click", ".edit", function(){		
