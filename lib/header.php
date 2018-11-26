@@ -1,40 +1,37 @@
 <?php
-    function getHeader() {
-        ?>
-<body style="background-color:#66CDAA;">
-        <meta charset="UTF-16">
-        <header>
-            <div>
-                <div class="container text-center">
-                    <div>
-                        <center><img src="../../img/test.png" style="right:89px;bottom:650px;float: left;" width="150" height="100"/>
+
+function getHeader() {
+    ?>
+    <meta charset="UTF-8">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <a class="navbar-brand" href="#">Taller Software</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Comisiones <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Empleados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Facturas</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mas+
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="../perfiles/">Perfiles</a>
+                        <a class="dropdown-item" href="../productos/">Productos</a>
+                        <a class="dropdown-item" href="../usuarios">Usuarios</a>
                     </div>
-                    <h2>TESTER</h2></center>
-                    <p>Tester</p>
-                </div>
-            </div>
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="../Menu/">Home</a></li>
-                            <li><a href="#">Perfil</a></li>
-                            <li><a href="#">Menu1</a></li>
-                            <li><a href="#">Menu2</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cerrar Sesion</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <?php
-    }
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <?php
+}

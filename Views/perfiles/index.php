@@ -10,7 +10,14 @@ libnivel3();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php        getMeta("Perfiles");?>
+        <?php getMeta("Perfiles"); ?>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="../../lib/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="../../lib/css/round-about.css" rel="stylesheet">
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -156,20 +163,18 @@ libnivel3();
                                 inputUsuarios: Usuarios,
                                 inputVender: Vender,
                                 inputPerfiles: Perfiles,
-                                
                                 buttonCreate: true,
                                 buttonEdit: true,
                                 buttonDelete: true
 
 
                             },
-                            function(data){
-                              if (data){
-                                  alert(data);
-                              }   
-                              else{
-                                  alert("no tengo datos");
-                              }
+                            function (data) {
+                                if (data) {
+                                    alert(data);
+                                } else {
+                                    alert("no tengo datos");
+                                }
                             });
 
 
@@ -214,6 +219,9 @@ libnivel3();
         </script>
     </head>
     <body>
+        <div>
+            <?php getHeader("Perfiles") ?>
+        </div>
         <div class="container">
             <div class="table-wrapper">
                 <div class="table-title">
